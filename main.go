@@ -1,14 +1,20 @@
 package main
 
 import (
+	"log"
+	"math/rand"
 	"net/http"
 	"os"
+	"strconv"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 func main() {
+	rand.Seed(time.Now().UnixNano())
+
 	r := createRouter()
 
 	setRoute(r)
@@ -35,7 +41,27 @@ func setRoute(router *gin.Engine) {
 }
 
 func index(c *gin.Context) {
+	value := getCookie(c, "test")
+	log.Printf("cookie value: %v", value)
+
+	if value == "" {
+		setCookie(c, "test", strconv.Itoa(rand.Intn(100)))
+	}
+
 	c.HTML(http.StatusOK, "index.tmpl", gin.H{
 		"title": "Hello, world",
 	})
+}
+
+func setCookie(c *gin.Context, key string, value string) {
+	log.Println("setCookie")
+	c.SetCookie(key, value, 3600, "/", "", false, true)
+}
+
+func getCookie(c *gin.Context, key string) string {
+	value, err := c.Cookie(key)
+	if err != nil {
+		return ""
+	}
+	return value
 }
