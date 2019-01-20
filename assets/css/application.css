@@ -1,0 +1,121 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+body {
+  font-family: 'Noto Sans Japanese', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+td {
+  height: 380px;
+}
+
+td.cinderella img {
+  max-width: 300px;
+  height: auto;
+}
+
+.cinderella-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  color: #708090;
+}
+
+h1 {
+  position: relative;
+  padding: 0.25em 0;
+}
+
+h1:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -moz-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+h2.cool {
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px  #4169e1;
+}
+
+h2.passion {
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #ffa500;
+}
+
+h2.cute {
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #ffc0cb;
+}
+
+h2.lmbg {
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #87ceeb;
+}
+
+h2.after-20 {
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #ba55d3;
+}
+
+.flex-container {
+  display: flex;
+  list-style: none;
+
+  button {
+    width: 280px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-style: none;
+  }
+}
+
+.flex-item img {
+  max-width: 280px;
+  height: auto;
+  cursor: pointer;
+}
+
+.vc {
+  font-size: 2.0em;
+  font-weight: bold;
+  color: #708090;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.indication {
+  margin-bottom: 30px;
+}
+
+.image-button {
+  width: 300px;
+}
+
+.result-icon {
+  max-width: 90px;
+  max-height: 90px;
+}
+
+.retry {
+  margin-top: 30px;
+  margin-left: 30px;
+
+  a {
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #cd5c5c;
+  }
+}
