@@ -1,0 +1,9 @@
+{
+	"comment": "",
+  "heroku": {
+    "goVersion": "go1.11"
+  },
+	"ignore": "test",
+	"package": [],
+	"rootPath": "hh-actors"
+}
