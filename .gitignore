@@ -10,3 +10,5 @@
 
 vendor/*
 !vendor/vendor.json
+
+assets/image/*
