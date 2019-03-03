@@ -100,7 +100,10 @@ h2.after-20 {
 }
 
 .image-button {
-  width: 300px;
+  width: 280px;
+  padding: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .result-icon {

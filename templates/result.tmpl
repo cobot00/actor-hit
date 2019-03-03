@@ -1,0 +1,23 @@
+<html>
+  <link rel="stylesheet" href="css/application.css">
+
+  <h1>今回の成績</h1>
+
+  <div class="vc">
+    <div class="indication">
+      {{.indication}}
+    </div>
+
+    {{range .iconPaths}}
+      <image src="{{.}}" class="result-icon">
+    {{end}}
+
+    <div class="retry">
+      {{.hitAverage}}
+    </div>
+
+    <div class="retry">
+      <a href="/">もう一度挑戦する</a>
+    </div>
+  </div>
+</html>
