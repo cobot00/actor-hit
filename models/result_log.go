@@ -1,7 +1,6 @@
 package models
 
 import (
-  "log"
   "math"
 
   "github.com/jinzhu/gorm"
@@ -31,7 +30,6 @@ func HitAverage(db *gorm.DB, ip string) int {
   }
 
   total := float64(len(resultLogs) * 10)
-  log.Println("[HitAverage] total: %f, hitTotal: %d", total, hitTotal)
 
   hitRate := float64(hitTotal) / total * 100
   return int(math.Ceil(hitRate))
