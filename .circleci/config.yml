@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.11
+
+    working_directory: /go/src/github.com/cobot00/actor-hit
+    steps:
+      - checkout
+
+      - run:
+          name: Download Dependencies
+          command: |
+            go get -u github.com/kardianos/govendor
+            govendor sync
+
+      - run:
+          name: run linter
+          command: |
+            go vet ./...
+
+      - run:
+          name: Golang Test
+          command: |
+            govendor test +local

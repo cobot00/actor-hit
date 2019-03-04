@@ -16,7 +16,7 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 
-	"hh-actors/models"
+	"github.com/cobot00/actor-hit/models"
 )
 
 const (
